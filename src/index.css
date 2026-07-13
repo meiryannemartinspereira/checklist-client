@@ -1,0 +1,79 @@
+.slider-container {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 20px 0;
+
+}
+
+
+.slider-track {
+
+    display: flex;
+
+    gap: 20px;
+
+    width: max-content;
+
+    animation: deslizar 25s linear infinite;
+
+}
+
+
+.checklist-card {
+
+    min-width: 320px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12);
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.checklist-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.presente {
+
+    border-left: 6px solid #22c55e;
+
+}
+
+
+.faltou {
+
+    border-left: 6px solid #ef4444;
+
+}
+
+
+
+@keyframes deslizar {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(-50%);
+
+    }
+
+}

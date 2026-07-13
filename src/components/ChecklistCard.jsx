@@ -2,45 +2,49 @@ export default function ChecklistCard({ item }) {
 
     return (
 
-        <div className="checklist-card">
+        <div
+            className={
+                `checklist-card ${item.presente
+                    ? "presente"
+                    : "faltou"
+                }`
+            }
+        >
 
             <h2>
                 {item.nome}
             </h2>
 
 
-            <p>
-                🕒 Horário: {item.horarioAula}
-            </p>
+            <div className="status">
 
-
-            <p>
                 {
                     item.presente
-                    ? "✅ Presente"
-                    : "❌ Faltou"
+                        ? "✅ Presente"
+                        : "❌ Faltou"
+                }
+
+            </div>
+
+
+            <p>
+                🕒 {item.horarioAula}
+            </p>
+
+
+            <p>
+                📝 {
+                    item.descricao || "Sem descrição"
                 }
             </p>
 
 
             <p>
-                📝 Descrição:
-                {
-                    item.descricao
-                    ? item.descricao
-                    : "Sem descrição"
+                💬 {
+                    item.observacao || "Sem observação"
                 }
             </p>
 
-
-            <p>
-                💬 Observação:
-                {
-                    item.observacao
-                    ? item.observacao
-                    : "Sem observação"
-                }
-            </p>
 
         </div>
 
