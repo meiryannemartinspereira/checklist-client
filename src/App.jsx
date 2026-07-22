@@ -1,11 +1,29 @@
-import Dashboard from "./pages/Dashboard"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Dashboard from "./pages/Dashboard";
+import CadastroAluno from "./pages/CadastroAluno";
 
-  return (
-    <Dashboard />
-  )
+
+export default function App() {
+
+    return (
+        <BrowserRouter>
+
+            <Routes>
+
+                <Route 
+                    path="/"
+                    element={<Dashboard />}
+                />
+
+                <Route 
+                    path="/cadastro-aluno"
+                    element={<CadastroAluno />}
+                />
+
+            </Routes>
+
+        </BrowserRouter>
+    );
 
 }
-
-export default App

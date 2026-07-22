@@ -1,0 +1,67 @@
+.cadastro-page {
+
+    min-height: 100vh;
+
+    background: #f8fafc;
+
+    padding: 40px;
+
+}
+
+
+
+.cadastro-container {
+
+    max-width: 600px;
+
+    margin: auto;
+
+}
+
+
+
+.cadastro-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.cadastro-header h1 {
+
+    font-size: 32px;
+
+    color: #1e293b;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.cadastro-header p {
+
+    color: #64748b;
+
+    font-size: 16px;
+
+}
+
+
+
+.cadastro-card {
+
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+
+    box-shadow:
+
+        0 10px 30px rgba(0,0,0,0.08);
+
+}
