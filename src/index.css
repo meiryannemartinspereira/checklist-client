@@ -1,79 +1,55 @@
 .slider-container {
-
     width: 100%;
-
     overflow: hidden;
-
     padding: 20px 0;
-
 }
-
 
 .slider-track {
-
     display: flex;
-
-    gap: 20px;
-
     width: max-content;
-
-    animation: deslizar 25s linear infinite;
-
+    gap: 40px;
+    animation: deslizar 30s linear infinite;
 }
 
+.slider-page {
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
 .checklist-card {
-
-    min-width: 320px;
-
     background: white;
-
     padding: 25px;
-
     border-radius: 16px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.12);
-
-    transition: transform 0.3s ease;
-
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    transition: transform .3s ease;
 }
-
 
 .checklist-card:hover {
-
     transform: translateY(-8px);
-
 }
-
 
 .presente {
-
     border-left: 6px solid #22c55e;
-
 }
-
 
 .faltou {
-
     border-left: 6px solid #ef4444;
-
 }
 
-
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+}
 
 @keyframes deslizar {
-
     from {
-
         transform: translateX(0);
-
     }
 
     to {
-
         transform: translateX(-50%);
-
     }
-
 }

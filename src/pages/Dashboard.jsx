@@ -3,86 +3,56 @@ import api from "../services/api";
 import ChecklistCard from "../components/ChecklistCard";
 
 export default function Dashboard() {
-
-    const [nome, setNome] = useState("");
     const [checklists, setChecklists] = useState([]);
 
-
     async function buscarAluno() {
-
-        if (nome.trim() === "") {
-            alert("Digite o nome do aluno.");
-            return;
-        }
-
         try {
-
-            const response = await api.get(`/checklist/${nome}`);
-
+            const response = await api.get("/alunos/alunos");
             setChecklists(response.data);
-
         } catch (error) {
-
-            alert("Aluno não encontrado.");
-
-            setChecklists([]);
-
+            console.error(error);
+            alert("Erro ao carregar checklist");
         }
-
     }
 
+    // Divide os cards em páginas de 10 itens (5 colunas x 2 linhas)
+    const paginas = [];
+
+    for (let i = 0; i < checklists.length; i += 10) {
+        paginas.push(checklists.slice(i, i + 10));
+    }
 
     return (
-
         <div>
-
             <h1>Checklist dos Alunos</h1>
 
-
-            <input
-                type="text"
-                placeholder="Digite o nome do Aluno"
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
-            />
-
-
             <button onClick={buscarAluno}>
-                Buscar
+                Carregar Checklists
             </button>
-
 
             <hr />
 
+            {paginas.length > 0 && (
+                <div className="slider-container">
+                    <div className="slider-track">
 
-            {
-                checklists.length > 0 && (
-
-                    <div className="slider-container">
-
-                        <div className="slider-track">
-
-                            {
-                                checklists.map((item, index) => (
-
+                        {[...paginas, ...paginas].map((pagina, paginaIndex) => (
+                            <div
+                                className="slider-page"
+                                key={paginaIndex}
+                            >
+                                {pagina.map((item, index) => (
                                     <ChecklistCard
                                         key={index}
                                         item={item}
                                     />
-
-                                ))
-                            }
-
-                        </div>
+                                ))}
+                            </div>
+                        ))}
 
                     </div>
-
-                )
-            }
-
-
+                </div>
+            )}
         </div>
-
     );
-
 }
