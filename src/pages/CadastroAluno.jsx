@@ -46,7 +46,7 @@ export default function CadastroAluno() {
             });
 
 
-        } catch(error) {
+        } catch (error) {
 
             console.error(error);
 
