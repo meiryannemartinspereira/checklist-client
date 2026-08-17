@@ -6,6 +6,7 @@ import App from "./App";
 
 import "./styles/global.css";
 import "./styles/auth.css";
+import "./styles/students.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
