@@ -1,0 +1,269 @@
+/* =========================
+   TEACHER PAGES
+========================= */
+
+.teacher-create-page,
+.teacher-list-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.page-header h2 {
+    margin: 0 0 6px;
+
+    color: var(--black);
+
+    font-size: 25px;
+}
+
+.page-header p {
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.teacher-form-card {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   FORM
+========================= */
+
+.teacher-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--black);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    color: var(--black);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(245, 196, 0, 0.15);
+}
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-top: 5px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--primary);
+
+    color: var(--black);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+/* =========================
+   LIST
+========================= */
+
+.teacher-list-card {
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 400px;
+
+    text-align: center;
+}
+
+.empty-state-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+
+    font-size: 25px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+
+    color: var(--black);
+
+    font-size: 17px;
+}
+
+.empty-state p {
+    margin: 0 0 20px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+    .page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .teacher-form-card {
+        padding: 20px;
+    }
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+    .form-actions .btn-primary {
+        width: 100%;
+    }
+}

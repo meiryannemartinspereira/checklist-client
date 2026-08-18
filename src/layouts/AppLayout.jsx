@@ -59,7 +59,7 @@ function AppLayout() {
                     </NavLink>
 
                     <NavLink
-                        to="/professors"
+                        to="/teachers"
                         className="sidebar-link"
                     >
                         <span className="sidebar-link-icon">

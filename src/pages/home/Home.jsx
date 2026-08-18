@@ -45,7 +45,7 @@ function Home() {
                 </Link>
 
                 <Link
-                    to="/professors/create"
+                    to="/teachers/create"
                     className="home-action"
                 >
                     <div className="home-action-icon">
