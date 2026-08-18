@@ -1,34 +1,34 @@
-# 📚 Código Kids Checklist Dashboard - Client
+# 📚 Código Kids Checklist - APP
 
-## 📌 Sobre o projeto
+## 📌 About the Project
 
-Este projeto é o **client web responsável pelo gerenciamento e visualização dos checklists da escola Código Kids**, localizada em Cachoeirinha/RS.
+This project is the **web client responsible for managing and visualizing checklists for Código Kids school**, located in Cachoeirinha/RS.
 
-A aplicação tem como objetivo fornecer uma interface moderna e intuitiva para acompanhamento dos registros de checklist dos alunos, consumindo dados disponibilizados por uma API backend.
+The application aims to provide a modern and intuitive interface for monitoring students' checklist records, consuming data provided by a backend API.
 
-O sistema permitirá o acompanhamento das informações relacionadas à presença, atividades realizadas, horários de aula e observações dos alunos através de um dashboard administrativo.
-
----
-
-## 🎯 Objetivo
-
-O objetivo deste client é centralizar a visualização e gerenciamento dos dados de checklist da escola, proporcionando uma experiência simples para acompanhamento da rotina dos alunos.
-
-A aplicação será responsável por:
-
-- Consultar dados de alunos através da API de checklist;
-- Exibir informações de presença e atividades realizadas;
-- Apresentar dashboards com indicadores e métricas;
-- Facilitar o acompanhamento da evolução dos alunos;
-- Disponibilizar uma interface amigável para gestão escolar.
+The system will allow users to monitor information related to student attendance, completed activities, class schedules, and student observations through an administrative dashboard.
 
 ---
 
-## 🏗️ Arquitetura
+## 🎯 Objective
 
-Este projeto representa a camada **Frontend Client** da solução.
+The objective of this client is to centralize the visualization and management of the school's checklist data, providing a simple experience for monitoring students' daily routines.
 
-A aplicação é desenvolvida utilizando **React.js**, sendo responsável pela interface do sistema e pela comunicação com a API backend desenvolvida em **Spring Boot**.
+The application will be responsible for:
+
+- Retrieving student data through the Checklist API;
+- Displaying attendance and completed activity information;
+- Providing dashboards with indicators and metrics;
+- Facilitating the monitoring of student progress;
+- Providing a user-friendly interface for school management.
+
+---
+
+## 🏗️ Architecture
+
+This project represents the **Frontend Client** layer of the solution.
+
+The application is developed using **React.js**, being responsible for the system interface and communication with the backend API developed with **Spring Boot**.
 
 ```text
 ┌──────────────────────────────┐
@@ -51,7 +51,7 @@ A aplicação é desenvolvida utilizando **React.js**, sendo responsável pela i
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
 - **React.js**
 - **JavaScript / JSX**
@@ -63,35 +63,35 @@ A aplicação é desenvolvida utilizando **React.js**, sendo responsável pela i
 
 ---
 
-## 🚀 Como executar o projeto
+## 🚀 How to Run the Project
 
-### 📋 Pré-requisitos
+### 📋 Prerequisites
 
-Antes de executar o projeto, certifique-se de possuir instalado:
+Before running the project, make sure you have the following installed:
 
 - **Node.js**
 - **npm**
 
-Para verificar as versões instaladas:
+To check the installed versions:
 
 ```bash
 node --version
 npm --version
 ```
 
-Recomenda-se utilizar uma versão **LTS** do Node.js.
+It is recommended to use an LTS version of Node.js.
 
 ---
 
-### 📥 1. Clonar o repositório
+### 📥 1. Clone the Repository
 
-Clone o projeto utilizando Git:
+Clone the project using Git:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone <REPOSITORY_URL>
 ```
 
-Entre no diretório do projeto:
+Navigate to the project directory:
 
 ```bash
 cd checklist-client
@@ -99,38 +99,38 @@ cd checklist-client
 
 ---
 
-### 📦 2. Instalar as dependências
+### 📦 2. Install Dependencies
 
-Execute:
+Run:
 
 ```bash
 npm install
 ```
 
-Esse comando irá instalar todas as dependências definidas no `package.json`.
+This command will install all dependencies defined in the `package.json`.
 
 ---
 
-### ▶️ 3. Executar o projeto
+### ▶️ 3. Run the Project
 
-Para iniciar o ambiente de desenvolvimento:
+To start the development environment:
 
 ```bash
 npm run dev
 ```
 
-Após a inicialização, o Vite disponibilizará a aplicação em um endereço semelhante a:
+After initialization, Vite will make the application available at an address similar to:
 
 ```text
 http://localhost:5173
 ```
 
-Acesse o endereço informado pelo terminal através do navegador.
+Access the address provided by the terminal through your browser.
 
 
 ### Build
 
-Gera a versão de produção:
+Generates the production version of the application:
 
 ```bash
 npm run build
@@ -138,13 +138,13 @@ npm run build
 
 ### Preview
 
-Executa localmente a versão de produção:
+Runs the production version locally:
 
 ```bash
 npm run preview
 ```
 ---
 
-## 👩‍💻 Desenvolvimento
+## 👩‍💻 Development
 
-Projeto desenvolvido como parte da solução de gerenciamento de checklists da **Código Kids — Cachoeirinha/RS**.
+This project was developed as part of the **Código Kids* checklist management solution, located in **Cachoeirinha/RS**.
