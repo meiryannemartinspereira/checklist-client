@@ -7,6 +7,9 @@ import App from "./App";
 import "./styles/global.css";
 import "./styles/auth.css";
 import "./styles/students.css";
+import "./styles/layout.css";
+import "./styles/home.css";
+import "./styles/teachers.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
