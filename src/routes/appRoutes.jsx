@@ -1,14 +1,26 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import {
+    Navigate,
+    Route,
+    Routes
+} from "react-router-dom";
 
 import AuthLayout from "../layouts/AuthLayout";
-import StudentCreate from "../pages/students/StudentCreate";
+import AppLayout from "../layouts/AppLayout";
 
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 
+import Home from "../pages/home/Home";
+
+import StudentCreate from "../pages/students/StudentCreate";
+
 function AppRoutes() {
     return (
         <Routes>
+
+            {/* =========================
+                AUTH
+            ========================= */}
 
             <Route element={<AuthLayout />}>
 
@@ -24,14 +36,48 @@ function AppRoutes() {
 
             </Route>
 
+
+            {/* =========================
+                APPLICATION
+            ========================= */}
+
+            <Route element={<AppLayout />}>
+
+                <Route
+                    path="/home"
+                    element={<Home />}
+                />
+
+                <Route
+                    path="/students/create"
+                    element={<StudentCreate />}
+                />
+
+            </Route>
+
+
+            {/* =========================
+                DEFAULT
+            ========================= */}
+
             <Route
-                path="*"
-                element={<Navigate to="/login" replace />}
+                path="/"
+                element={
+                    <Navigate
+                        to="/home"
+                        replace
+                    />
+                }
             />
 
             <Route
-                path="/students/create"
-                element={<StudentCreate />}
+                path="*"
+                element={
+                    <Navigate
+                        to="/home"
+                        replace
+                    />
+                }
             />
 
         </Routes>
