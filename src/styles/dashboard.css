@@ -1,0 +1,295 @@
+/* =========================
+   DASHBOARD PAGE
+========================= */
+
+.dashboard-page {
+    width: 100%;
+
+    padding: 30px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    margin-bottom: 6px;
+
+    font-size: 28px;
+}
+
+.dashboard-header p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.checklist-carousel {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 10px 0 25px;
+}
+
+.checklist-carousel-track {
+    display: flex;
+
+    gap: 20px;
+
+    width: max-content;
+
+    animation:
+        checklist-scroll 45s linear infinite;
+}
+
+.checklist-carousel:hover
+.checklist-carousel-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================
+   CHECKLIST CARD
+========================= */
+
+.checklist-card {
+    width: 330px;
+
+    flex-shrink: 0;
+
+    padding: 22px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.checklist-card-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.checklist-card-header h3 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+.checklist-card-date {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.checklist-status {
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.checklist-status.pendente {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+.checklist-status.homologado {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.checklist-card-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.checklist-info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CHECKLIST ITEMS
+========================= */
+
+.checklist-card-items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 18px 0;
+}
+
+.checklist-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 14px;
+}
+
+.checklist-success {
+    color: #16a34a;
+}
+
+.checklist-danger {
+    color: #dc2626;
+}
+
+
+/* =========================
+   OPINION / OBSERVATION
+========================= */
+
+.checklist-card-opinion,
+.checklist-card-observation {
+    margin-top: 12px;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    background: var(--gray-light);
+}
+
+.checklist-card-opinion strong,
+.checklist-card-observation strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+}
+
+.checklist-card-opinion p,
+.checklist-card-observation p {
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.dashboard-message {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 250px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+.dashboard-error {
+    color: #dc2626;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes checklist-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-page {
+        padding: 20px 0;
+    }
+
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+
+    .checklist-card {
+        width: 290px;
+    }
+
+}

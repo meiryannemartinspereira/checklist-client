@@ -10,6 +10,8 @@ import AppLayout from "../layouts/AppLayout";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 
+import Dashboard from "../pages/dashboard/Dashboard";
+
 import Home from "../pages/home/Home";
 
 import StudentList from "../pages/students/StudentList";
@@ -52,6 +54,11 @@ function AppRoutes() {
                 <Route
                     path="/home"
                     element={<Home />}
+                />
+
+                <Route
+                    path="/dashboard"
+                    element={<Dashboard />}
                 />
 
 
