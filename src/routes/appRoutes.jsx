@@ -10,12 +10,13 @@ import AppLayout from "../layouts/AppLayout";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 
-import TeacherList from "../pages/teachers/TeacherList";
-import TeacherCreate from "../pages/teachers/TeacherCreate";
-
 import Home from "../pages/home/Home";
 
+import StudentList from "../pages/students/StudentList";
 import StudentCreate from "../pages/students/StudentCreate";
+
+import TeacherList from "../pages/teachers/TeacherList";
+import TeacherCreate from "../pages/teachers/TeacherCreate";
 
 function AppRoutes() {
     return (
@@ -46,14 +47,37 @@ function AppRoutes() {
 
             <Route element={<AppLayout />}>
 
+                {/* HOME */}
+
                 <Route
                     path="/home"
                     element={<Home />}
                 />
 
+
+                {/* STUDENTS */}
+
+                <Route
+                    path="/students"
+                    element={<StudentList />}
+                />
+
                 <Route
                     path="/students/create"
                     element={<StudentCreate />}
+                />
+
+
+                {/* TEACHERS */}
+
+                <Route
+                    path="/teachers"
+                    element={<TeacherList />}
+                />
+
+                <Route
+                    path="/teachers/create"
+                    element={<TeacherCreate />}
                 />
 
             </Route>
@@ -81,16 +105,6 @@ function AppRoutes() {
                         replace
                     />
                 }
-            />
-
-            <Route
-                path="/teachers"
-                element={<TeacherList />}
-            />
-
-            <Route
-                path="/teachers/create"
-                element={<TeacherCreate />}
             />
 
         </Routes>

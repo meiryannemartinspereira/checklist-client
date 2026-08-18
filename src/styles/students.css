@@ -1,3 +1,7 @@
+/* =========================
+   STUDENT CREATE
+========================= */
+
 .student-page {
     min-height: 100vh;
 
@@ -40,7 +44,7 @@
 }
 
 /* =========================
-   FIELD
+   STUDENT FIELD
 ========================= */
 
 .student-field {
@@ -59,6 +63,8 @@
 .student-field input,
 .student-field select {
     width: 100%;
+
+    box-sizing: border-box;
 
     padding: 14px 16px;
 
@@ -84,7 +90,7 @@
 }
 
 /* =========================
-   BUTTON
+   STUDENT BUTTON
 ========================= */
 
 .student-button {
@@ -120,7 +126,208 @@
 }
 
 /* =========================
-   RESPONSIVE
+   STUDENT LIST
+========================= */
+
+.student-list-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.student-list-card {
+    width: 100%;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+/* =========================
+   STUDENT TABLE
+========================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.students-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: left;
+}
+
+.students-table thead {
+    background: var(--gray-light);
+}
+
+.students-table th {
+    padding: 14px 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--gray);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.students-table td {
+    padding: 16px 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--black);
+
+    font-size: 14px;
+}
+
+.students-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.students-table tbody tr:hover {
+    background: var(--gray-light);
+}
+
+.students-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   COURSES
+========================= */
+
+.student-courses {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.course-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: var(--primary);
+
+    color: var(--black);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.no-course {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+/* =========================
+   TABLE ACTIONS
+========================= */
+
+.actions-column {
+    width: 130px;
+
+    text-align: center;
+}
+
+.table-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.action-button {
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: var(--white);
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.action-button:hover {
+    transform: translateY(-1px);
+}
+
+.action-button.view:hover {
+    background: #f3f4f6;
+}
+
+.action-button.edit:hover {
+    background: #fef3c7;
+}
+
+.action-button.delete:hover {
+    background: #fee2e2;
+}
+
+/* =========================
+   LIST MESSAGES
+========================= */
+
+.student-list-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+.student-list-message.error {
+    color: #dc2626;
+}
+
+/* =========================
+   RESPONSIVE - CREATE
 ========================= */
 
 @media (max-width: 600px) {
@@ -135,5 +342,34 @@
 
     .student-header h1 {
         font-size: 26px;
+    }
+}
+
+/* =========================
+   RESPONSIVE - LIST
+========================= */
+
+@media (max-width: 650px) {
+
+    .student-list-page {
+        padding: 0;
+    }
+
+    .student-list-card {
+        border-radius: 8px;
+    }
+
+    .students-table th,
+    .students-table td {
+        padding: 12px 15px;
+    }
+
+    .actions-column {
+        width: 110px;
+    }
+
+    .action-button {
+        width: 32px;
+        height: 32px;
     }
 }
