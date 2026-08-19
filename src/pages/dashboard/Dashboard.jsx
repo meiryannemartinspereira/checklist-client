@@ -1,43 +1,34 @@
 import { useEffect, useState } from "react";
-
-import ChecklistCarousel
-    from "../../components/dashboard/ChecklistCarousel";
-
-import { getChecklists }
-    from "../../services/checklistService";
+import ChecklistCarousel from "../../components/dashboard/ChecklistCarousel";
+import { getChecklists } from "../../services/checklistService";
 
 function Dashboard() {
 
-    const [checklists, setChecklists] = useState([]);
-
+    const [checklist, setChecklist] = useState(null);
     const [loading, setLoading] = useState(true);
-
     const [error, setError] = useState("");
-
 
     useEffect(() => {
 
-        async function loadChecklists() {
+        async function loadChecklist() {
 
             try {
 
                 setLoading(true);
-
                 setError("");
 
                 const data = await getChecklists();
-
-                setChecklists(data);
+                setChecklist(data);
 
             } catch (error) {
 
                 console.error(
-                    "Erro ao carregar checklists:",
+                    "Erro ao carregar checklist:",
                     error
                 );
 
                 setError(
-                    "Não foi possível carregar os checklists."
+                    "Não foi possível carregar o checklist."
                 );
 
             } finally {
@@ -45,98 +36,48 @@ function Dashboard() {
                 setLoading(false);
 
             }
-
         }
 
-        loadChecklists();
+        loadChecklist();
 
     }, []);
-
 
     return (
         <main className="dashboard-page">
 
-            {/* =========================
-                HEADER
-            ========================= */}
-
             <header className="dashboard-header">
-
                 <div>
-
-                    <h1>
-                        Dashboard
-                    </h1>
+                    <h1>Dashboard</h1>
 
                     <p>
-                        Acompanhe os checklists dos alunos.
+                        Acompanhe o checklist dos alunos.
                     </p>
-
                 </div>
-
             </header>
 
-
-            {/* =========================
-                LOADING
-            ========================= */}
-
             {loading && (
-
                 <div className="dashboard-message">
-
-                    Carregando checklists...
-
+                    Carregando checklist...
                 </div>
-
             )}
-
-
-            {/* =========================
-                ERROR
-            ========================= */}
 
             {!loading && error && (
-
                 <div className="dashboard-message dashboard-error">
-
                     {error}
-
                 </div>
-
             )}
 
+            {!loading && !error && !checklist && (
+                <div className="dashboard-message">
+                    Nenhum checklist encontrado.
+                </div>
+            )}
 
-            {/* =========================
-                EMPTY
-            ========================= */}
-
-            {!loading &&
-                !error &&
-                checklists.length === 0 && (
-
-                    <div className="dashboard-message">
-
-                        Nenhum checklist encontrado.
-
-                    </div>
-
-                )}
-
-
-            {/* =========================
-                CHECKLIST
-            ========================= */}
-
-            {!loading &&
-                !error &&
-                checklists.length > 0 && (
-
-                    <ChecklistCarousel
-                        checklists={checklists}
-                    />
-
-                )}
+            {!loading && !error && checklist && (
+                <ChecklistCarousel
+                    checklist={checklist}
+                />
+            )}
 
         </main>
     );
