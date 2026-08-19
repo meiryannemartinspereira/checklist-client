@@ -16,6 +16,7 @@ import Home from "../pages/home/Home";
 
 import StudentList from "../pages/students/StudentList";
 import StudentCreate from "../pages/students/StudentCreate";
+import StudentDetails from "../pages/students/StudentDetails";
 
 import TeacherList from "../pages/teachers/TeacherList";
 import TeacherCreate from "../pages/teachers/TeacherCreate";
@@ -74,6 +75,10 @@ function AppRoutes() {
                     element={<StudentCreate />}
                 />
 
+                <Route
+                    path="/students/:id"
+                    element={<StudentDetails />}
+                />
 
                 {/* TEACHERS */}
 
