@@ -12,38 +12,24 @@ function StudentList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
+
     useEffect(() => {
-        loadStudents();
+        const fetchStudents = async () => {
+            try {
+                setLoading(true);
+                setError("");
+                const data = await getStudents();
+                setStudents(data);
+            } catch (error) {
+                console.error("Erro ao buscar alunos:", error);
+                setError("Não foi possível carregar os alunos.");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchStudents();
     }, []);
-
-    const loadStudents = async () => {
-
-        try {
-
-            setLoading(true);
-            setError("");
-
-            const data = await getStudents();
-
-            setStudents(data);
-
-        } catch (error) {
-
-            console.error(
-                "Erro ao buscar alunos:",
-                error
-            );
-
-            setError(
-                "Não foi possível carregar os alunos."
-            );
-
-        } finally {
-
-            setLoading(false);
-
-        }
-    };
 
     const handleView = (id) => {
         navigate(`/students/${id}`);

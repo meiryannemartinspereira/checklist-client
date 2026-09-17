@@ -18,7 +18,12 @@ function Dashboard() {
                 setError("");
 
                 const data = await getChecklists();
-                setChecklist(data);
+                console.log(
+                    "Checklists carregados:",
+                    data
+                );
+
+                setChecklists(data);
 
             } catch (error) {
 
