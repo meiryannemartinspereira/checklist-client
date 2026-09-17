@@ -85,7 +85,7 @@ function AppLayout() {
                     </NavLink>
 
                     <NavLink
-                        to="/checklists"
+                        to="/checklist"
                         className="sidebar-link"
                     >
                         <span className="sidebar-link-icon">

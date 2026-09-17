@@ -20,6 +20,7 @@ import StudentDetails from "../pages/students/StudentDetails";
 
 import TeacherList from "../pages/teachers/TeacherList";
 import TeacherCreate from "../pages/teachers/TeacherCreate";
+import Checklist from "../pages/checklist/Checklist";
 
 function AppRoutes() {
     return (
@@ -90,6 +91,10 @@ function AppRoutes() {
                 <Route
                     path="/teachers/create"
                     element={<TeacherCreate />}
+                />
+                <Route
+                    path="/checklist"
+                    element={<Checklist />}
                 />
 
             </Route>

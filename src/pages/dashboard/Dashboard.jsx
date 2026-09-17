@@ -26,6 +26,10 @@ function Dashboard() {
                 setError("");
 
                 const data = await getChecklists();
+                console.log(
+                    "Checklists carregados:",
+                    data
+                );
 
                 setChecklists(data);
 
