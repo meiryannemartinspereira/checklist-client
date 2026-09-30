@@ -31,7 +31,7 @@ function Dashboard() {
                     data
                 );
 
-                setChecklists(data);
+                setChecklists([data]);
 
             } catch (error) {
 
