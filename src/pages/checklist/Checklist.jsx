@@ -3,8 +3,8 @@ import TableChecklist from "../../components/checklist/TableChecklist";
 function Checklist() {
   return (
     <div>
-      <h1>Checklist</h1>
-      <p>Checklist alunos</p>
+
+      <h1>08:00 - 10:00</h1>
       <TableChecklist />
     </div>
   );
